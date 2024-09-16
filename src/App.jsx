@@ -34,17 +34,13 @@ export default function App() {
     <div className="bg-cyan-950 min-h-screen">
       <Navbar />
       {!isClick ? (
-        <div className="grid grid-cols-4 gap-6 m-10 max-w-full items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 m-10 max-w-full items-center">
           {data.map((item, index) => (
             <div
               key={index}
               className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-white-800 dark:border-white-700 p-2"
             >
-              <img
-                src={item.preview[2]}
-                alt="meme"
-                className="flex min-w-[300px] h-72 m-2"
-              />
+              <img src={item.preview[2]} alt="meme" className="flex h-72 m-2" />
               <button
                 className="bg-green-500 hover:bg-green-700 text-white font-cursive font-bold p-2 rounded w-full mt-2"
                 onClick={() => handleButtonClick(item)}
